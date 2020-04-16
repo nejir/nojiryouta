@@ -61,7 +61,7 @@ void loop() {
         send_flag=1;
         break;
       }
-      /*重量と平均重量の差が300g以上、重量3kgの時そっく停止続ける*/
+      /*重量と平均重量の差が300g以上、重量3kg以上の時、計測し続ける*/
       for(;int(gram)-AVG_weight>3||AVG_weight-int(gram)>3&&int(gram)>30;)
       {
           gram = (Scale.get_units(5) + 50)/100;
